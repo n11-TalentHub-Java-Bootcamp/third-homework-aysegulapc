@@ -19,6 +19,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /** This endpoint gets all user according to json format.
+     * This endpoint was written for item 1 of question 3 in the homework.
+     * @return MappingJacksonValue
+     * **/
     @GetMapping("")
     public MappingJacksonValue findAllUserList() {
         List<User> userList = userService.findAll();
@@ -26,6 +30,10 @@ public class UserController {
         return mapping;
     }
 
+    /** This endpoint gets a specific user by id according to json format.
+     * This endpoint was written for item 2 of question 3 in the homework.
+     * @return MappingJacksonValue
+     * **/
     @GetMapping("/{id}")
     public MappingJacksonValue findUserById(@PathVariable String id) {
         User user = userService.findById(id);
@@ -41,12 +49,19 @@ public class UserController {
         return mapping;
     }
 
+    /** This endpoint save a user to mongodb.
+     * This endpoint was written for item 3 of question 3 in the homework.
+     * @return ResponseEntity<Object>
+     * **/
     @PostMapping("")
     public ResponseEntity<Object> save(@RequestBody User user){
         user = userService.save(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
+    /** This endpoint delete a user from mongodb.
+     * This endpoint was written for item 4 of question 3 in the homework.
+     * **/
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         userService.deleteById(id);
