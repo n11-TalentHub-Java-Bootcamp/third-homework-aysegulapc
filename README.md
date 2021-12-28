@@ -5,6 +5,11 @@
 In this assignment, user and product comment collections were added on mongo db and get, post and delete operations were performed.
 Swagger was used as API document and necessary tests were performed with this tool.
 
+![image](https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png)
+
+For a quick start to mongo db and more information, you can visit this link: 
+[Connect to MongoDB](https://docs.mongodb.com/guides/server/drivers/)
+
 ## Answers
 
 ### Question 1: Add User and ProductReview Collections to Mongodb
