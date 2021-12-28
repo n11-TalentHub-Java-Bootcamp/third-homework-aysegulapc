@@ -1,4 +1,4 @@
-# Third-homework
+# third-homework
 
 ## Introduction
 
